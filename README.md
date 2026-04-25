@@ -28,35 +28,31 @@ This project to be as part of UST Vision AI SEIS766.
     - How2Sign: https://how2sign.github.io/ (last access 4/25/2026)
 
 ```bash
-env/python.exe scripts/download_data.py --dataset <choose a dataset that you want>
+env/python.exe scripts/download_data.py --dataset <choose a dataset>
 ```
   ---
 ## Train
 
 ```bash
-env/python.exe train.py --config configs/<choose a config file that you want>
+env/python.exe train.py --config configs/<choose a config file>
 ```
-
----
 ### Resume from checkpoint
 ```bash
-env/python.exe train.py --config configs/config_aslcitizen_full.yaml --resume checkpoints/aslcitizen_full/last.pth
+env/python.exe train.py --config <choose a config file> --resume checkpoints/<choose a checkpoint>
 ```
 ---
 ## Save Results (plots + summary)
 ```bash
-env/python.exe save_results.py --config configs/config_aslcitizen_full.yaml
+env/python.exe save_results.py --config configs/<choose a config file>
 ```
-
+---
 ## Results
-![Examples of Dataset](docs/images/dataset_samples.png)
-![Training Curve](docs/images/training_curve.png)
-![Confusion Matrix](docs/images/conf_matrix.png)
+![ASL-Citizen 100](results/aslcitizen100/training_curves.png)
+![WLASL 100](results/wlasl100/training_curves.png)
+![WLASL 2000](results/wlasl2000/training_curves.png)
 
-## Example Outputs
-![Example of prediction](docs/images/example_prediction.png)
 
-## Future Work
-- convert notebooks to scripts
-- Add Description generator model
-- Add more robust classification (live image)
+---
+## Example
+![Input](docs/images/example_prediction.png)
+![Output](docs/images/example_prediction.png)
