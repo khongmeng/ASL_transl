@@ -11,15 +11,18 @@ This project to be as part of UST Vision AI SEIS766.
 ## Setup
 
 ### Create and activate conda environment
+```bash
   conda create -p ./env python=3.10 -y
   conda activate ./env
-
+```
 ### Install PyTorch with CUDA 12.6
+```bash
   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
-
+```
 ### Install remaining dependencies
+```bash
   pip install -r requirements.txt
-
+```
   ---
 ## Dataset
 - Dataset used can be found on: 
