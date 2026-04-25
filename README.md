@@ -3,9 +3,11 @@
 
 This project to be as part of UST Vision AI SEIS766.
 
+---
 ## Achitecture
 - R(2+1)D-18 pretrained on Kinetics-400.
 
+---
 ## Setup
 
 ### Create and activate conda environment
@@ -19,35 +21,32 @@ This project to be as part of UST Vision AI SEIS766.
   pip install -r requirements.txt
 
   ---
-## Download Dataset
+## Dataset
 - Dataset used can be found on: 
     - WLASL: https://www.kaggle.com/datasets/risangbaskoro/wlasl-processed (last access 4/15/2026).
     - ASL-Citizen: https://www.kaggle.com/datasets/abd0kamel/asl-citizen (last access 4/21/2026)
     - How2Sign: https://how2sign.github.io/ (last access 4/25/2026)
 
-### ASL-Citizen (~26 GB)
-  env/python.exe scripts/download_data.py --dataset abd0kamel/asl-citizen
-
-### WLASL
-  env/python.exe scripts/download_data.py --dataset risangbaskoro/wlasl-processed
-
+```bash
+env/python.exe scripts/download_data.py --dataset <choose a dataset that you want>
+```
   ---
 ## Train
 
-### ASL-Citizen — all 2731 classes
-  env/python.exe train.py --config configs/config_aslcitizen_full.yaml
+```bash
+env/python.exe train.py --config configs/<choose a config file that you want>
+```
 
-### ASL-Citizen — top 100 classes only
-  env/python.exe train.py --config configs/config_aslcitizen100.yaml
-
+---
 ### Resume from checkpoint
-  env/python.exe train.py --config configs/config_aslcitizen_full.yaml --resume checkpoints/aslcitizen_full/last.pth
-
-  ---
-  Save Results (plots + summary)
-
-  env/python.exe save_results.py --config configs/config_aslcitizen_full.yaml
-
+```bash
+env/python.exe train.py --config configs/config_aslcitizen_full.yaml --resume checkpoints/aslcitizen_full/last.pth
+```
+---
+## Save Results (plots + summary)
+```bash
+env/python.exe save_results.py --config configs/config_aslcitizen_full.yaml
+```
 
 ## Results
 ![Examples of Dataset](docs/images/dataset_samples.png)
