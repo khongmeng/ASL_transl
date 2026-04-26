@@ -7,7 +7,6 @@ checkpoints/
 
 # Training logs and results
 logs/
-results/
 
 # Python
 __pycache__/
