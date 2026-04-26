@@ -47,9 +47,6 @@ env/python.exe save_results.py --config configs/<choose a config file>
 ---
 ## Results
 ![ASL-Citizen 100](results/aslcitizen100/training_curves.png)
-![WLASL 100](results/wlasl100/training_curves.png)
-![WLASL 2000](results/wlasl2000/training_curves.png)
-
 
 ---
 ## Demo
@@ -57,7 +54,7 @@ env/python.exe save_results.py --config configs/<choose a config file>
 Run inference on any video file and save an annotated GIF:
 
 ```bash
-env/python.exe demo.py --checkpoint checkpoints/aslcitizen_full/best.pth --video path/to/video.mp4
+env/python.exe demo.py --checkpoint checkpoints/<choose path to model.pth> --video <choose path to video.mp4>
 ```
 
 | APPLE (90.6%) | ANYONE (76.4%) | ADVERTISE (72.7%) |
