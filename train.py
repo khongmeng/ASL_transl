@@ -9,6 +9,7 @@ Usage:
 
 import argparse
 import csv
+import json
 import os
 import time
 
@@ -145,7 +146,6 @@ def main():
 
     # Save label map for inference later
     os.makedirs(cfg['training']['checkpoint_dir'], exist_ok=True)
-    import json
     with open(os.path.join(cfg['training']['checkpoint_dir'], 'label_map.json'), 'w') as f:
         json.dump(train_ds.idx_to_label, f, indent=2)
 

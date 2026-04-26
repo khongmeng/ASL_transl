@@ -36,10 +36,11 @@ desktop.ini
 # Editor
 .vscode/
 .idea/
+.claude/
 *.swp
 *.swo
 
 # Secrets
 .env
 kaggle.json
-.claude/
+
