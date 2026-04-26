@@ -57,5 +57,4 @@ Run inference video
 env/python.exe demo.py --checkpoint checkpoints/<choose path to model.pth> --video <choose path to video.mp4>
 ```
 
-|:---:|:---:|:---:|
 | ![APPLE](assets/demo_apple.gif) | ![ANYONE](assets/demo_ANYONE.gif) | ![ADVERTISE](assets/demo_ADVERTISE.gif) |
