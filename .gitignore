@@ -1,0 +1,46 @@
+# Dataset and downloaded archives
+data/
+
+# Model checkpoints
+checkpoints/
+*.pth
+
+# Training logs and results
+logs/
+results/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Conda / virtualenv
+env/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.Trash-0/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Secrets
+.env
+kaggle.json
+.claude/
