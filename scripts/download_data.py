@@ -1,11 +1,5 @@
 """
-Download a dataset from Kaggle using kagglehub.
-
 Downloads directly into data/ inside this repo.
-
-Requirements:
-  - Kaggle account with API token at ~/.kaggle/kaggle.json
-    OR env vars: KAGGLE_USERNAME and KAGGLE_KEY
 
 Run:
   env/python.exe scripts/download_data.py --dataset abd0kamel/asl-citizen
