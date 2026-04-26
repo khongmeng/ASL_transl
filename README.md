@@ -2,6 +2,7 @@
 # American Sign Language (ASL) Recognition
 
 This project to be as part of UST Vision AI SEIS766.
+
 ---
 ## Dataset
 - Dataset used can be found on: 
