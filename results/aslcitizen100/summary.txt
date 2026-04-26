@@ -1,4 +1,4 @@
-WLASL-100 ASL Recognition ¡ª Training Summary
+ASL-Citizen-100 ASL Recognition ¡ª Training Summary
 ==================================================
 
 Model

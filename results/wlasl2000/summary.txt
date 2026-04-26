@@ -35,5 +35,5 @@ Test Evaluation (best checkpoint, unseen data)
   Test Top-5     : 23.41%
 
 Checkpoints
-  Best model     : checkpoints/best.pth
-  Last model     : checkpoints/last.pth
+  Best model     : checkpoints/wlasl2000/best.pth
+  Last model     : checkpoints/wlasl2000/last.pth

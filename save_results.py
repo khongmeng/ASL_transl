@@ -114,6 +114,19 @@ def main():
     log_dir  = cfg['training']['log_dir']
     ckpt_dir = cfg['training']['checkpoint_dir']
     out_dir  = args.out or cfg['training'].get('results_dir', 'results')
+
+    # Derive dataset label for plot titles
+    if cfg['data'].get('csv_dir'):
+        top_n = cfg['data'].get('top_n_classes')
+        dataset_label = f"ASL-Citizen-{top_n}" if top_n else "ASL-Citizen"
+    else:
+        nslt = cfg['data'].get('nslt_path', '')
+        for n in ['100', '300', '1000', '2000']:
+            if f'nslt_{n}' in nslt:
+                dataset_label = f"WLASL-{n}"
+                break
+        else:
+            dataset_label = None  # resolved below after num_classes is known
     history_path    = args.history    or os.path.join(log_dir,  'history.csv')
     checkpoint_path = args.checkpoint or os.path.join(ckpt_dir, 'best.pth')
 
@@ -124,6 +137,8 @@ def main():
 
     ckpt = torch.load(checkpoint_path, map_location='cpu')
     num_classes = len(ckpt['label_to_idx'])
+    if dataset_label is None:
+        dataset_label = f"WLASL-{num_classes}"
     num_params = sum(p.numel() for p in
                      build_model(cfg['model']['backbone'], num_classes,
                                  cfg['model']['dropout']).parameters()) / 1e6
@@ -143,7 +158,7 @@ def main():
     # Plots  (3 rows x 2 cols)
     # -------------------------------------------------------------------------
     fig = plt.figure(figsize=(15, 14))
-    fig.suptitle(f'WLASL-{num_classes} ASL Recognition — {cfg["model"]["backbone"]}',
+    fig.suptitle(f'{dataset_label} ASL Recognition — {cfg["model"]["backbone"]}',
                  fontsize=14, fontweight='bold')
     gs = gridspec.GridSpec(3, 2, figure=fig, hspace=0.40, wspace=0.30)
 
@@ -224,7 +239,7 @@ def main():
     # -------------------------------------------------------------------------
     # Summary text
     # -------------------------------------------------------------------------
-    summary = f"""WLASL-{num_classes} ASL Recognition — Training Summary
+    summary = f"""{dataset_label} ASL Recognition — Training Summary
 {'='*50}
 
 Model

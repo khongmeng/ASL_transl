@@ -23,6 +23,7 @@ training:
   gradient_clip: 1.0
   warmup_epochs: 5
   use_amp: true
-  checkpoint_dir: "checkpoints"
-  log_dir: "logs"
+  checkpoint_dir: "checkpoints/wlasl2000"
+  log_dir: "logs/wlasl2000"
+  results_dir: "results/wlasl2000"
   save_every: 5
