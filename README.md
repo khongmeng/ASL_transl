@@ -59,3 +59,4 @@ env/python.exe demo.py --checkpoint checkpoints/<choose path to model.pth> --vid
 | Demo1 | Demo2 | Demo3 |
 |:---:|:---:|:---:|
 | ![APPLE](assets/demo_apple.gif) | ![ANYONE](assets/demo_ANYONE.gif) | ![ADVERTISE](assets/demo_ADVERTISE.gif) |
+
