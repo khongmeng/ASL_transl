@@ -8,7 +8,11 @@ This project to be as part of UST Vision AI SEIS766.
 - R(2+1)D-18 pretrained on Kinetics-400.
 
 ---
+<<<<<<< HEAD
 ## Setup
+=======
+## Usage
+>>>>>>> 7f736a0f83f21c6f414c98cc8883133abcd07d42
 
 ### Create and activate conda environment
 ```bash
@@ -34,7 +38,11 @@ This project to be as part of UST Vision AI SEIS766.
 env/python.exe scripts/download_data.py --dataset <choose a dataset>
 ```
   ---
+<<<<<<< HEAD
 ## Train
+=======
+### Train
+>>>>>>> 7f736a0f83f21c6f414c98cc8883133abcd07d42
 
 ```bash
 env/python.exe train.py --config configs/<choose a config file>
