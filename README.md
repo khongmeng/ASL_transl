@@ -2,17 +2,18 @@
 # American Sign Language (ASL) Translation
 
 This project to be as part of UST Vision AI SEIS766.
-
+---
+## Dataset
+- Dataset used can be found on: 
+    - WLASL: https://www.kaggle.com/datasets/risangbaskoro/wlasl-processed (last access 4/15/2026).
+    - ASL-Citizen: https://www.kaggle.com/datasets/abd0kamel/asl-citizen (last access 4/21/2026)
+    - How2Sign: https://how2sign.github.io/ (last access 4/25/2026)
 ---
 ## Achitecture
 - R(2+1)D-18 pretrained on Kinetics-400.
 
 ---
-<<<<<<< HEAD
-## Setup
-=======
 ## Usage
->>>>>>> 7f736a0f83f21c6f414c98cc8883133abcd07d42
 
 ### Create and activate conda environment
 ```bash
@@ -27,23 +28,11 @@ This project to be as part of UST Vision AI SEIS766.
 ```bash
   pip install -r requirements.txt
 ```
-  ---
-## Dataset
-- Dataset used can be found on: 
-    - WLASL: https://www.kaggle.com/datasets/risangbaskoro/wlasl-processed (last access 4/15/2026).
-    - ASL-Citizen: https://www.kaggle.com/datasets/abd0kamel/asl-citizen (last access 4/21/2026)
-    - How2Sign: https://how2sign.github.io/ (last access 4/25/2026)
-
+### Download dataset
 ```bash
 env/python.exe scripts/download_data.py --dataset <choose a dataset>
 ```
-  ---
-<<<<<<< HEAD
-## Train
-=======
 ### Train
->>>>>>> 7f736a0f83f21c6f414c98cc8883133abcd07d42
-
 ```bash
 env/python.exe train.py --config configs/<choose a config file>
 ```
@@ -51,8 +40,7 @@ env/python.exe train.py --config configs/<choose a config file>
 ```bash
 env/python.exe train.py --config <choose a config file> --resume checkpoints/<choose a checkpoint>
 ```
----
-## Save Results (plots + summary)
+### Save Results (plots + summary)
 ```bash
 env/python.exe save_results.py --config configs/<choose a config file>
 ```
