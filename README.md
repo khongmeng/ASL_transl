@@ -52,6 +52,14 @@ env/python.exe save_results.py --config configs/<choose a config file>
 
 
 ---
-## Example
-![Input](docs/images/example_prediction.png)
-![Output](docs/images/example_prediction.png)
+## Demo
+
+Run inference on any video file and save an annotated GIF:
+
+```bash
+env/python.exe demo.py --checkpoint checkpoints/aslcitizen_full/best.pth --video path/to/video.mp4
+```
+
+| APPLE (90.6%) | ANYONE (76.4%) | ADVERTISE (72.7%) |
+|:---:|:---:|:---:|
+| ![APPLE](assets/demo_apple.gif) | ![ANYONE](assets/demo_ANYONE.gif) | ![ADVERTISE](assets/demo_ADVERTISE.gif) |
