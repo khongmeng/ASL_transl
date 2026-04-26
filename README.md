@@ -51,12 +51,11 @@ env/python.exe save_results.py --config configs/<choose a config file>
 ---
 ## Demo
 
-Run inference on any video file and save an annotated GIF:
+Run inference video
 
 ```bash
 env/python.exe demo.py --checkpoint checkpoints/<choose path to model.pth> --video <choose path to video.mp4>
 ```
 
-| APPLE (90.6%) | ANYONE (76.4%) | ADVERTISE (72.7%) |
 |:---:|:---:|:---:|
 | ![APPLE](assets/demo_apple.gif) | ![ANYONE](assets/demo_ANYONE.gif) | ![ADVERTISE](assets/demo_ADVERTISE.gif) |
