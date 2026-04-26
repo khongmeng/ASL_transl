@@ -11,7 +11,7 @@ This project to be as part of UST Vision AI SEIS766.
 ---
 ## Achitecture
 - R(2+1)D-18 pretrained on Kinetics-400.
-
+![Input](assets/ASL_classif_pipeline.png)
 ---
 ## Usage
 
